@@ -21,6 +21,15 @@ when 'debian'
     libxml2-dev
     mime-support
   )
+when 'ubuntu'
+  %w(
+    build-essential
+    libfuse-dev
+    aptfs
+    libcurl4-openssl-dev
+    libxml2-dev
+    mime-support
+  )
 when 'rhel'
   %w(
     gcc
