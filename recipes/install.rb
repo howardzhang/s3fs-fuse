@@ -11,7 +11,7 @@ template '/etc/passwd-s3fs' do
   mode 0600
 end
 
-prereqs = case node.platform_family
+prereqs = case node.platform
 when 'debian'
   %w(
     build-essential
@@ -30,7 +30,7 @@ when 'ubuntu'
     libxml2-dev
     mime-support
   )
-when 'rhel'
+when 'redhat', 'centos', 'fedora'
   %w(
     gcc
     libstdc++-devel
